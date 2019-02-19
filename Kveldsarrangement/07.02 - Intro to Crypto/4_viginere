@@ -1,0 +1,19 @@
+Oppgave 4 - viginere chiffer
+
+Fungerer som en serie ceasar chiffer. Oppsettet er en matrise bestående av 26
+rader med alfabetet skrevet ut:
+
+ABCD....
+AB...
+A..
+osv. (se google for figurer osv.)
+
+Nøkkelen er en streng bokstaver der koden blir bokstaven i møtepunktet mellom
+meldingen og nøkkelen. Wikipedia siden har også en god innføring i teorien bak
+denne (https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher). 
+
+Lag et program som kan kode og/eller dekode meldinger med viginere chiffer.
+
+Hard mode:
+Bruk f.eks Friedman testen og frekvensanalyse til å lage et program som kan
+knekke alle viginere chiffer.

@@ -1,0 +1,16 @@
+Oppgave 2 - Scytale ciffer
+
+Denne metoden var opprinnelig et stykke pergament eller lær med bokstaver. Når
+denne ble tvinnet rundt en sylinder av rett diameter kommer meldingen til syne
+langs sylinderen. Metoden er enkel: meldingen er gjemt som bokstaver eller tegn med
+et gitt mellomrom. 
+
+Eksempel: I en tekststreng er det hver 4 bokstav som utgjør meldingen. 
+"akekrelaielnuks lxmdzlwunvs fhesclwejoaneurdpqwecso feosmlemngrøoweruhyencst" 
+gir meldingen: "kan du sende smøret"
+
+Meldingen under en kodet med Scytale(5): 
+
+0+(T"x9]xSo:0 o(F@:mtT#}em(`Tt8!i"i `l}mV#G$e%<.rsv@hU a7hys$G\Uc,4PZi&ZBie._s"nWy}Kc;D/~e>xqC Ll'Gi8?$gs-bGM h\_:a*Tn&  f2\l{`[rodf)ptkr{& dr6_mF@aBo)8#Cr:0>aelbaK O<gZa86GYrPqfetz?Wr ,f,<tfgSvh?xnVa^r~pnv~U3 &G :s6xrMcfb#LiooH!e}Eycn1sWUcA$ QeKtq}.Hc_{ %DxxA?^*U .JI/l)t2[oH?C?t_.9> ;;+wo)'WHf@8\V 8]^UpcB}HeQ!HXo#Z@rpg&UMlx[@$e'm>M _(c~dy'!wo*;9%nxu#''A,>NtwomN Cp?>gzp/vejN&<tFEl  %_nft&Y=7h FFXa,EZCtI=vD.qq]V”'tQT
+
+Skriv et program som dechiffrer meldingen.

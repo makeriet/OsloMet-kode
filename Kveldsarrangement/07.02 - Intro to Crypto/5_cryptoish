@@ -1,0 +1,19 @@
+Oppgave 5 - tilnærmet kryptering
+
+Kryptering baserer seg på avansert matematikk langt forbi kompleksiteten til
+enkle chiffer. Disse er basert på matematiske formler der hensikten er å gjøre
+det vanskelig eller nær umulig å knekke med dagens tilgjengelige
+prosesseringskraft.
+
+1. Reduser bokstavene til ascii verdier og kode hver enkelt tegn til et kode
+segment på flere tegn med en metode du kjenner.
+
+2. lag en ny variant av denne der segmentene manipuleres via en matematisk
+funksjon. Lag den så enkel eller kompleks du ønsker. 
+
+3. Hashing er en annen mye brukt metode. Se om du klarer å gjenskape en
+hashingalgoritme. (ref: https://en.wikipedia.org/wiki/Cryptographic_hash_function)
+
+4. En interessant ekstraoppgave er å prøve å gjenskape en Diffie-Hellman delt
+nøkkel metode(SSL). Hvordan kan man lage en enkel variant av en delt nøkkel
+protokoll? (intro: https://brilliant.org/wiki/diffie-hellman-protocol/) 

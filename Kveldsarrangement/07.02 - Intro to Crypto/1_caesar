@@ -1,0 +1,25 @@
+Oppgave 1 - Caesar skift
+
+Caesar skift er et enkelt chiffer(Cipher(matrix), Le Chiffre(Casino Royale)).For å 
+kode en melding forskyver man bokstavene med et bestemt antall flytt. Hvis 2 er 
+nøkkelen blir da a = c, d = f osv. Hvis man går forbi slutten av alfabetet teller 
+man f.eks: x y z a b c. 
+
+Begrensninger i oppgaven:
+- Det engelske alfabetet brukes i meldingen. Ingen æøå eller spesielle karakterer
+
+Meldingen nedenfor er kodet med Caesar(13). skriv et program som dekoder
+meldingen til klartekst.
+
+melding: ur jub pbagebyf gur fcvpr pbagebyf gur havirefr
+
+
+Utfordring nivå to:
+Strengen nedenfor er kodet med Caesar chiffer men med et ukjent antall skift!
+Skriv en kode som dekoder meldingen. Easymode: ordet "hugely" er en del av
+meldingen. Alle bokstavene er små bokstaver, og spesialtegnene er tatt med på
+samme plassering.
+
+
+znuamn nk oy suyz xktuctkj lux noy vraey, corroas ynaqkyvkaxk aryu xksaoty znk suyz vuvarax vukz ot znk ktmroyn ratmaamk. noy hkyz qtuct cuxq ot vukzxe oy noy iurrkizout ul 154 yuttkzy. yuttkz 18 oy a vaxz ul laox euazn ykwaktik ul ynaqkyvkaxk’y iurrkizout, cnoin oy ajjxkyykj zu at attaskj euatm sat. oz oy a namkre otlraktzoar atj ulzkt wauzkj cuxq; atj znkxk axk ykbkxar juahrk skatotmy ot znk vuks cnoin mobk oz mxkazkx jkvzn. ynaqkyvkaxk yzaxzy yuttkz 18 cozn a lrazzkxotm wakyzout zu noy hkrubkj: “ynarr o iusvaxk znkk zu a yasskx’y jae?” nk muky ut zu royz yusk tkmazobk ayvkizy ul yasskx zu kyzahroyn znaz noy hkrubkj oy hkzzkx. ot znk rayz vaxz ul znk vuks, nk yzazky znaz znk hkaaze ul noy hkrubkj corr tkbkx lajk ay nk corr saqk oz kzkxtar znuamn znk cuxjy ul znoy vuks cnoin corr xksotj znk cuxrj ul nos “yu rutm ay skt iat hxkaznk ux keky iat ykk”. yuttkz 18 oy tuz utre znk suyz lasuay vuks cxozzkt he corroas ynaqkyvkaxk haz aryu znk suyz xktuctkj yuttkz kbkx cxozzkt.
+
