@@ -1,0 +1,16 @@
+Oppgave 1 - Arabiske tall til Romerske tall
+
+Skriv et program som kan konvertere input i arabiske tall eller romertall 
+til den motsatte.
+
+Konverteringen er som følger:
+
+Rom:	Arabiske(decimal)
+I 		1 		unus
+V 		5 		quinque
+X 		10 		decem
+L 		50 		quinquaginta
+C 		100 	centum
+D 		500 	quingenti
+M 		1000 	mille
+
