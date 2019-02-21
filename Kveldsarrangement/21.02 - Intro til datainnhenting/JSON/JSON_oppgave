@@ -1,0 +1,33 @@
+JSO /( csv?)
+
+Turer med bysykkel i Juli 2018 i JSON format. Turene er sortert etter
+start-tid. Dataene er start stasjon, start tid og slutt stasjon og slutt tid.
+tidene er YYYY-MM-DD TT:MM:SS +XXXX (XXXX = tidssone). Det er lagt ved en
+versjon i csv også for referanse.
+
+trips-2018.7.1-2018.7.31.json
+trips-2018.7.1-2018.7.31.csv
+
+Det er i tillegg data på stasjonene i et "human readable" format med whitespace
+formattering, og en "machine readable" versjon: HR_stasjoner.JSON og
+MR_stasjoner.JSON.
+
+Med disse dataene vet vi hvor turene gikk fra og til, og hvor lenge de varte. Vi
+vet hvor stasjonene er og hva de heter. Det er mange gøyale ting man kan gjøre med 
+et slikt sett med data. Her er en liste over forslag på informasjon som kan
+hentes fra dette settet:
+
+1: Hvor lange var turene? 
+	Vi vet posisjonen til stasjonene. Når vi setter dette sammen med start
+punkt og slutt punkt kan vi måle ca. hvor lang hver enkelt tur har vært.
+	1.1: Total syklet distanse i juli?
+
+2: Hvilke områder er mest travle?
+	hvilke stasjoner brukes mest? når brukes de? Kan vi plotte migreringene inn
+og ut fra sentrum i ukedagene kontra helgene? 
+
+3: Hvor raskt sykler folk på morgenen kontra på natten?
+	Vi vet start-tid og slutt-tid. Kan vi se noen forskjeller i hvor raskt
+distanse blir tilbakelagt 
+
+

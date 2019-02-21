@@ -1,0 +1,137 @@
+XML
+
+---------------------
+**** Litt om XML ****
+---------------------
+
+XML står for eXtensible Markup Language
+XML er laget for å være hard- og software uavhengig, og dataen skal beskrive
+seg selv. Dette gjør den ved hjelp av selvdefinerte tags.
+
+Til tross for at XML ligner litt på HTML har den ingen forhåndsbestemte tags,
+og gjør ingenting i seg selv, men er en praktisk måte å frakte data på.
+
+Et eksempel på en XML-fil kan derfor være
+
+<Forening>
+    <Foreningsnavn>Kod(e)</Foreningsnavn>
+    <Interesseområde>Programmering</Interesseområde>
+    <Medlemmer>
+        <Medlemsnavn>Per</Medlemsnavn>
+        <Medlemsnavn>Kari</Medlemsnavn>
+        <Medlemsnavn>Vegard</Medlemsnavn>
+    </Medlemmer>
+</Forening>
+
+
+-------------------------------
+**** Litt om CD-datasettet ****
+-------------------------------
+
+Vedlagt er filen cddata som inneholder en oversikt over en rekke CD-er.
+For hver CD inneholder den følgende informasjon:
+<TITLE>
+<ARTIST>
+<COUNTRY>
+<COMPANY>
+<PRICE>
+<YEAR>
+
+
+~~~~~~~~~~~~~~~~~~~~
+Oppgave 1:
+
+Hent ut data fra cddata.xml og print ut artistnavnene i den rekkefølgen de er
+gitt i datasettet.
+
+~~~~~~~~~~~~~~~~~~~~
+Oppgave 2:
+Tell hvor mange CD-er som kommer fra USA, og hvor mange som kommer fra UK
+
+~~~~~~~~~~~~~~~~~~~~
+Oppgave 3:
+
+Hent ut prisen på samtlige CD-er og print informasjon om den billigste og
+dyreste CD-en.
+
+
+
+
+
+
+----------------------------------
+**** Litt om Ruter-datasettet ****
+----------------------------------
+
+Vedlagt i filen ruterdata.xml er en datadump fra Ruters sanntidsdata rundt 13:45 i dag 21.02.
+Daten inneholder informasjon om samtlige T-banetog som kjørte en rute i det dataen
+ble hentet, samt en del T-baner som skulle kjøre i nærmeste fremtid, og T-baner
+som nylig var ferdig med sin rute.
+
+Hvis du vil hente sanntidsdata fra akkurat nå kan du følge denne linken:
+https://api.entur.org/anshar/1.0/rest/et?datasetId=RUT
+
+Det er også mulig å hente dataen ved hjelp av en API-request, men oppgavene i dag
+vil fokusere på å lese fra fil.
+
+Filen er på XML-format, og dersom du åpner den i en standard tekst-editor vil du trolig
+ikke klare å lese noe ut av det på egenhånd.
+
+For å bedre se hvordan dokumentet er strukturert kan du dra det inn i en nettleser.
+Dataen er nested på følgende måte:
+<Siri>
+    <ServiceDelivery>
+        <EstimatedTimetbleDelivery>
+            <EstimatedJournetVersionFrame>
+                <EstimatedVehcileJourney>
+
+Inne i EstimatedVehicleJourney er der dataen faktisk ligger.
+
+Hver EstimatedVehcileJourney inneholder metadata om den gitte T-banen på toppen.
+Her ligger informasjon som linjenummer, hvilken destinasjon det står foran
+på T-banetoget og hvilken retning den kjører.
+
+Deretter er det en beholder med tag <EstimatedCalls>, og under her ligger en
+oversikt over samtlige stasjoner T-banen skal innom.
+
+Eksempel på en <EstimatedCall>:
+
+<EstimatedCall>
+    <StopPointRef>NSR:Quay:6659</StopPointRef>
+    <VisitNumber>1</VisitNumber>
+    <StopPointName>ØSÅ</StopPointName>
+    <DestinationDisplay>Ellingsrudåsen</DestinationDisplay>
+    <AimedDepartureTime>2019-02-21T14:53:00+01:00</AimedDepartureTime>
+    <ExpectedDepartureTime>2019-02-21T14:53:00+01:00</ExpectedDepartureTime>
+    <DepartureStatus>onTime</DepartureStatus>
+    <DeparturePlatformName>2</DeparturePlatformName>
+</EstimatedCall>
+
+Her ser vi det ligger informasjon om hvilket stoppested den skal på, når den i
+følge timetabellen skal forlate stoppestedet, og når den faktisk vil forlate
+stoppestedet.
+
+
+~~~~~~~~~~~~~~~~~~~~
+Oppgave 1:
+
+Tell hvor mange tbaner som var i datasettet
+
+~~~~~~~~~~~~~~~~~~~~
+Oppgave 2:
+
+Sjekk hvor mange tbaner som hadde en variasjon mellom AimedDepartureTime og ExpectedDepartureTime
+enn ett minutt
+
+~~~~~~~~~~~~~~~~~~~~
+Oppgave 3:
+
+Velg deg en Tbanestasjon (for eksmepel NAT), og prøv å hent ut alle baner som skal stoppe der.
+Print ut tiden de skal være der i stigende rekkefølge.
+
+~~~~~~~~~~~~~~~~~~~~
+Oppgave 4 - Avansert:
+
+Benytt deg av Entur sin API til å hente ny sanntidsdata.
+Skriv ut neste tbane som skal være ved en gitt stasjon (for eksempel NAT) og oppdater
+datasettet en gang i minuttet. Skriv ut navnet på Tbanen og når den skal være der.
