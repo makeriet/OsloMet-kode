@@ -1,0 +1,21 @@
+Røverspråk
+
+I denne oppgaven skal dere generere røverspråk ut fra brukers input.
+Dersom dere får god tid kan dere begynne å parse inn data fra andre steder,
+for eksempel hele wikipedia-artikler.
+
+Røverspråk fungerer på følgende måte:
+For hver konsonant skal konsonanten skrives to ganger med en o imellom.
+Vokaler røres ikke.
+
+Noen eksempler:
+En - Enon
+To - Toto
+Eksempel - Ekoksosemompopelol
+
+En ekstra utfordring er å beholde stor bokstav på starten av setningen, men
+ikke når denne bokstaven gjentas. For eksempel:
+
+Dette er en test
+Dodetottote eror enon totesostot
+^ ^
