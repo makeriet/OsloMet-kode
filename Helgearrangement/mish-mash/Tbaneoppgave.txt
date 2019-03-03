@@ -1,0 +1,69 @@
+Kodeoppgaven går ut på å finne ut hvor mange tbaner som går i et gitt tidspunkt uavhengig av stopp, test med litt slingringsmål i starten (+- 1 min). Datasettet ligger på: https://github.com/makeriet/OsloMet-kode/tree/master/Kveldsarrangement/21.02%20-%20Intro%20til%20datainnhenting/XML 
+
+Eksempel: 
+Hvor mange tbaner går 14:53:00 +- 1 min? Output: 46
+Hvor mange tbaner går 14:53:00? Output: 13
+
+Hvis dere får til telleren er neste steg å finne ut hvor disse banene skal gå?
+
+Hvordan lese XML-filen: 
+XML står for eXtensible Markup Language, XML er laget for å være hard- og software uavhengig, og dataen skal beskrive seg selv. Dette gjør den ved hjelp av selvdefinerte tags.Til tross for at XML ligner litt på HTML har den ingen forhåndsbestemte tags, og gjør ingenting i seg selv, men er en praktisk måte å frakte data på. Filen som blir brukt i denne oppgaven er bygd opp på følgende metode:
+
+<ServiceDelivery>
+<ResponseTimestamp>2019-02-26T21:56:37.910136+01:00</ResponseTimestamp>
+<ProducerRef>ENT</ProducerRef>
+<MoreData>false</MoreData>
+<EstimatedTimetableDelivery version="2.0">
+<ResponseTimestamp>2019-02-26T21:56:37.910178+01:00</ResponseTimestamp>
+<EstimatedJourneyVersionFrame>
+<RecordedAtTime>2019-02-26T21:56:37.910139+01:00</RecordedAtTime>
+<EstimatedVehicleJourney>
+<RecordedAtTime>2019-02-26T21:52:44.087+01:00</RecordedAtTime>
+<LineRef>RUT:Line:5</LineRef>
+<DirectionRef>2</DirectionRef>
+<FramedVehicleJourneyRef>
+<DataFrameRef>2019-02-26</DataFrameRef>
+<DatedVehicleJourneyRef>7063</DatedVehicleJourneyRef>
+</FramedVehicleJourneyRef>
+<PredictionInaccurate>true</PredictionInaccurate>
+<DataSource>RUT</DataSource>
+<RecordedCalls/>
+<EstimatedCalls>
+
+Hver t-banelinje som er ute å kjører har en EstimatedVehicleJourney i forhold til hvilket togsett det er snakk om, og for hvert togsett ligger tidspunktet banen skal være på de forskjellige stoppene inne i EstimatedCalls. 
+
+Dette betyr at man må iterere både på EstimatedVehicleJourney og på EstimatedCalls, noe som varierer fra språk til språk. Eksempler på dette er: 
+
+
+
+Python: 
+tree = ET.parse('ruterdata.xml')
+root = tree.getroot()
+trips = root[0][3][1]
+for trip in trips.iter('{http://www.siri.org.uk/siri}EstimatedVehicleJourney'):
+   stops = trip.find('{http://www.siri.org.uk/siri}EstimatedCalls')
+
+JavaScript: 
+for (
+     var i = 0;
+     i <
+     result.Siri.ServiceDelivery[0].EstimatedTimetableDelivery[0]
+       .EstimatedJourneyVersionFrame[0].EstimatedVehicleJourney.length;
+     i++
+   ){
+for (
+         var j = 0;
+         j <
+         result.Siri.ServiceDelivery[0].EstimatedTimetableDelivery[0]
+           .EstimatedJourneyVersionFrame[0].EstimatedVehicleJourney[i]
+           .EstimatedCalls[0].EstimatedCall.length;
+         j++
+       )
+}
+
+
+XML-filen er hentet herfra:
+https://api.entur.org/anshar/1.0/rest/et?datasetId=RUT
+
+
+
