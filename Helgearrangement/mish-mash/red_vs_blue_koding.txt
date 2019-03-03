@@ -1,0 +1,17 @@
+I denne oppgaven skal lagene først utvikle et program for å kode en melding.
+Deretter bytter man med nabolaget og forsøker å dekode meldingen. Det vil være
+ca. 30 min til hver del (tentativt).
+
+I den første delen er fokuset på å lage programmet som skal kode meldingen. Vi
+holder oss til engelsk tekst, for å gjøre det enklere. 
+
+I den andre delen skal man forsøke å dekode en melding som er kodet med et
+ukjent chiffer, men innenfor rammen av "røverspråk" type utskifting. Her gjelder
+det å lage verktøy som kan analysere teksten og endten skrive et program som
+dekoder den spesifike meldingen eller enda bedre; et som virker generelt på alle
+varianter.
+
+Vi har vedlagt noen ressurser for å komme i gang med å lage et program for å
+analysere/dekode tekst. 
+
+
